@@ -1,0 +1,53 @@
+
+@import './responsive_mixin';
+@import './colors';
+@import './fonts';
+@import './typography';
+
+$taskbar_height: 34px;
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: calc(100% - 34px);
+    width: 100%;
+    position: relative;
+}
+
+#task-bar {
+    background-color: $primary_grey;
+    color: black;
+    height: $taskbar_height;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 4px;
+    line-height: $taskbar_height;
+
+
+    .item {
+        height: calc(100% - 4px);
+        //line-height: calc(100% - 4px);
+        border: 1px solid black;
+        float: left;
+        padding: 2px;
+        margin-left: 4px;
+    }
+    #start-btn {
+        margin-left: 0;
+    }
+    
+}
+#desktop {
+    background-color: $desktop_color;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
