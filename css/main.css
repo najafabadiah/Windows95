@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'MS_Sans_Serif';
+  src: url("../assets/font/MS-Sans-Serif.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'MS_Sans_Serif_Bold';
+  src: url("../assets/font/MS-Sans-Serif-bold.ttf") format("truetype");
+}
+
 html, body {
   height: 100%;
 }
@@ -8,7 +18,9 @@ body {
 }
 
 .container {
-  height: calc(100% - 34px);
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   position: relative;
 }
@@ -16,16 +28,22 @@ body {
 #task-bar {
   background-color: #c3c3c3;
   color: black;
-  height: 34px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   position: absolute;
   bottom: 0;
   padding: 4px;
-  line-height: 34px;
+  line-height: 40px;
+  font-family: 'MS_Sans_Serif';
 }
 
 #task-bar .item {
-  height: calc(100% - 4px);
+  height: 100%;
+  line-height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid black;
   float: left;
   padding: 2px;
@@ -34,6 +52,12 @@ body {
 
 #task-bar #start-btn {
   margin-left: 0;
+  font-family: 'MS_Sans_Serif_bold';
+}
+
+#task-bar #taskbar-clock {
+  position: absolute;
+  right: 0;
 }
 
 #desktop {

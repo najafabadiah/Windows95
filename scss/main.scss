@@ -4,7 +4,8 @@
 @import './fonts';
 @import './typography';
 
-$taskbar_height: 34px;
+$taskbar_height: 40px;
+$taskbar_padding: 4px;
 html, body {
     height: 100%;
 }
@@ -15,7 +16,8 @@ body {
 }
 
 .container {
-    height: calc(100% - 34px);
+    height: 100%;
+    box-sizing: border-box;
     width: 100%;
     position: relative;
 }
@@ -24,23 +26,32 @@ body {
     background-color: $primary_grey;
     color: black;
     height: $taskbar_height;
+    box-sizing: border-box;
     width: 100%;
     position: absolute;
     bottom: 0;
-    padding: 4px;
+    padding: $taskbar_padding;
     line-height: $taskbar_height;
+    font-family: 'MS_Sans_Serif';
 
 
     .item {
-        height: calc(100% - 4px);
+        height: 100%;
+        line-height: 100%;
+        box-sizing: border-box;
         //line-height: calc(100% - 4px);
         border: 1px solid black;
         float: left;
         padding: 2px;
-        margin-left: 4px;
+        margin-left: $taskbar_padding;
     }
     #start-btn {
         margin-left: 0;
+        font-family: 'MS_Sans_Serif_bold';
+    }
+    #taskbar-clock {
+        position: absolute;
+        right: 0;
     }
     
 }
