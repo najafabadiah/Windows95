@@ -6,6 +6,7 @@
 
 $taskbar_height: 40px;
 $taskbar_padding: 4px;
+$taskbar_item_width: 180px;
 html, body {
     height: 100%;
 }
@@ -13,12 +14,14 @@ html, body {
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    font-family: 'MS_Sans_Serif';
 }
 
 .container {
     height: 100%;
     box-sizing: border-box;
-    width: 100%;
+    //width: 100%;
     position: relative;
 }
 
@@ -32,26 +35,85 @@ body {
     bottom: 0;
     padding: $taskbar_padding;
     line-height: $taskbar_height;
-    font-family: 'MS_Sans_Serif';
 
+    .container > div {
+        float: left;
+    }
+
+    #taskbar-application {
+        display: inline;
+    }
 
     .item {
         height: 100%;
         line-height: 100%;
         box-sizing: border-box;
         //line-height: calc(100% - 4px);
-        border: 1px solid black;
+        border-top: 2px solid #f4f2ec;
+        border-left: 2px solid #f4f2ec;
+        border-right: 2px solid #151513;
+        border-bottom: 2px solid #151513;
         float: left;
-        padding: 2px;
+        padding: 4px;
         margin-left: $taskbar_padding;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        cursor: default;
+        width: $taskbar_item_width;
+        max-width: $taskbar_item_width;
+        img {
+            height: 20px;
+            margin-right: 4px;
+        }
     }
+    .item:active,
+    #start-btn:active {
+        border-top: 2px solid #151513;
+        border-left: 2px solid #151513;
+        border-right: 2px solid #f4f2ec;
+        border-bottom: 2px solid #f4f2ec;
+    }
+
+    .item-focus {
+        border-top: 2px solid #151513;
+        border-left: 2px solid #151513;
+        border-right: 2px solid #f4f2ec;
+        border-bottom: 2px solid #f4f2ec;
+        font-family: 'MS_Sans_Serif_bold';
+    }
+
+    & > .container > .item,
+    & > .container > .item{
+        width: fit-content;
+    }
+
     #start-btn {
         margin-left: 0;
         font-family: 'MS_Sans_Serif_bold';
+        border-top: 2px solid #f4f2ec;
+        border-left: 2px solid #f4f2ec;
+        border-right: 2px solid #151513;
+        border-bottom: 2px solid #151513;
+        * {
+            float: left;
+        }
+        span {
+            
+        }
     }
-    #taskbar-clock {
+    
+    #taskbar-clock,
+    #taskbar-clock:active {
         position: absolute;
         right: 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-top: 2px solid #888888;
+        border-left: 2px solid #888888;
+        border-right: 2px solid #f5f5f5;
+        border-bottom: 2px solid #f5f5f5;
+        text-transform: uppercase;
     }
     
 }
@@ -61,4 +123,53 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.crosshatch {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(
+       45deg, 
+       rgba(195 ,195 ,195, .4) 25%, 
+       transparent 25%, 
+       transparent 50%, 
+       rgba(195 ,195 ,195, .4) 50%, 
+       rgba(195 ,195 ,195, .4) 75%, 
+       transparent 75%, 
+       transparent
+       ), linear-gradient(
+        -45deg, 
+        rgba(195 ,195 ,195, .4) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(195 ,195 ,195, .4) 50%, 
+        rgba(195 ,195 ,195, .4) 75%, 
+        transparent 75%, 
+        transparent
+        );
+    background-size: 3px 3px;
+}
+.desktop-shortcut {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 4px;
+    box-sizing: border-box;
+
+    & > div {
+        display: block;
+        text-align: center;
+    }
+
+    .shortcut-icon img {
+        display: block;
+        margin: 0 auto;
+        height: 36px;
+    }
+    .shortcut-text {
+        max-height: 100%;
+        padding-top: 7px;
+        box-sizing: border-box;
+    }
 }
