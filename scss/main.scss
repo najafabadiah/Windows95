@@ -8,8 +8,11 @@ $taskbar_height: 40px;
 $taskbar_padding: 4px;
 $taskbar_item_width: 180px;
 
-$start_menu_height: 400px;
+$start_menu_height: 350px;
 $start_menu_width: 220px;
+
+$start_menu_list_width: calc(212px - 36px);
+$start_sub_menu_list_width: 212px;
 
 html, body {
     height: 100%;
@@ -238,6 +241,111 @@ body {
             //line-height: 26px;
         }
     }
+
+    #start-menu-list {
+        width: $start_menu_list_width;
+        height: calc(100% - 4px);
+        //background-color: red;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        right: 0;
+        margin: 2px;
+
+
+        .sub-menu-triangle-right {
+            height: 100%;
+            float: right;
+            padding: calc(calc(342px/7)/2 - 5px) 0;
+            box-sizing: border-box;
+        }
+        
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0px;
+            .active {
+                background-color: $primary_blue;
+                & > span {
+                    color: #f4f2ec;
+                }
+                & > .sub-menu-triangle-right .right-triangle{
+                    border-color: transparent transparent transparent #f4f2ec;
+                }
+            }
+            li:hover {
+                background-color: $primary_blue;
+                & > span {
+                    color: #f4f2ec;
+                }
+                & > .sub-menu-triangle-right .right-triangle{
+                    border-color: transparent transparent transparent #f4f2ec;
+                }
+                cursor: default;
+            }
+            li:hover > .sub-menu-list {
+                display: block;
+            }
+            & > li {
+                height: calc(342px/7);
+                line-height: calc(342px/7);
+                box-sizing: border-box;
+                padding: 0px 10px;
+                position: relative;
+                //padding: calc((322px/7 - 23px)/2) 0;
+                & > img {
+                    height: 23px;
+                    margin-right: 4px;
+                }
+
+                & > * {
+                    vertical-align: middle;
+                }
+
+                .sub-menu-list {
+                    display: none;
+                    width: $start_sub_menu_list_width;
+                    background-color: red;
+                    box-sizing: content-box;
+                    position: absolute;
+                    background-color: $primary_grey;
+                    border-top: 2px solid #f4f2ec;
+                    border-left: 2px solid #f4f2ec;
+                    border-right: 2px solid #151513;
+                    border-bottom: 2px solid #151513;
+                    top: -4px;
+                    right: calc(-3px - #{$start_sub_menu_list_width});
+                    padding: 2px;
+                    .sub-menu-triangle-right {
+                        padding: calc(32px/2 - 5px) 0;
+                    }
+
+                    img {
+                        height: 18px;
+                    }
+
+                    li {
+                        height: 32px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+
+        & > ul:first-child {
+            border-bottom: 2px solid #888888;
+        }
+        & > ul:last-child {
+            border-top: 2px solid #f4f2ec;
+        }
+    }
 }
 
-
+.right-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 6px;
+    border-color: transparent transparent transparent black;
+}

@@ -186,7 +186,7 @@ body {
   border-bottom: 2px solid #151513;
   color: black;
   width: 220px;
-  height: 400px;
+  height: 350px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -233,5 +233,123 @@ body {
   color: #f4f2ec;
   font-weight: 100;
   float: left;
+}
+
+#start-menu #start-menu-list {
+  width: calc(212px - 36px);
+  height: calc(100% - 4px);
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  right: 0;
+  margin: 2px;
+}
+
+#start-menu #start-menu-list .sub-menu-triangle-right {
+  height: 100%;
+  float: right;
+  padding: calc(calc(342px/7)/2 - 5px) 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#start-menu #start-menu-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+}
+
+#start-menu #start-menu-list ul .active {
+  background-color: #060080;
+}
+
+#start-menu #start-menu-list ul .active > span {
+  color: #f4f2ec;
+}
+
+#start-menu #start-menu-list ul .active > .sub-menu-triangle-right .right-triangle {
+  border-color: transparent transparent transparent #f4f2ec;
+}
+
+#start-menu #start-menu-list ul li:hover {
+  background-color: #060080;
+  cursor: default;
+}
+
+#start-menu #start-menu-list ul li:hover > span {
+  color: #f4f2ec;
+}
+
+#start-menu #start-menu-list ul li:hover > .sub-menu-triangle-right .right-triangle {
+  border-color: transparent transparent transparent #f4f2ec;
+}
+
+#start-menu #start-menu-list ul li:hover > .sub-menu-list {
+  display: block;
+}
+
+#start-menu #start-menu-list ul > li {
+  height: calc(342px/7);
+  line-height: calc(342px/7);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+  position: relative;
+}
+
+#start-menu #start-menu-list ul > li > img {
+  height: 23px;
+  margin-right: 4px;
+}
+
+#start-menu #start-menu-list ul > li > * {
+  vertical-align: middle;
+}
+
+#start-menu #start-menu-list ul > li .sub-menu-list {
+  display: none;
+  width: 212px;
+  background-color: red;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  background-color: #c3c3c3;
+  border-top: 2px solid #f4f2ec;
+  border-left: 2px solid #f4f2ec;
+  border-right: 2px solid #151513;
+  border-bottom: 2px solid #151513;
+  top: -4px;
+  right: calc(-3px - 212px);
+  padding: 2px;
+}
+
+#start-menu #start-menu-list ul > li .sub-menu-list .sub-menu-triangle-right {
+  padding: calc(32px/2 - 5px) 0;
+}
+
+#start-menu #start-menu-list ul > li .sub-menu-list img {
+  height: 18px;
+}
+
+#start-menu #start-menu-list ul > li .sub-menu-list li {
+  height: 32px;
+  line-height: 32px;
+}
+
+#start-menu #start-menu-list > ul:first-child {
+  border-bottom: 2px solid #888888;
+}
+
+#start-menu #start-menu-list > ul:last-child {
+  border-top: 2px solid #f4f2ec;
+}
+
+.right-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent black;
 }
 /*# sourceMappingURL=main.css.map */
