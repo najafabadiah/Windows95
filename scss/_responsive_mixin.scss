@@ -1,0 +1,8 @@
+@mixin responsive-box($width){
+    position: relative;
+    &:before{
+    content: '';
+    display: block;
+    padding-right: $width;
+    }
+}

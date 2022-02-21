@@ -1,153 +1,187 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <script type="text/javascript" src="js/main.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div id="desktop">
-                <div id="start-menu">
-                    <div id="start-brand">
-                        <div class="container">
-                            <div>Windows&nbsp;</div>
-                            <div>95</div>
-                        </div>
-                    </div>
-                    <div id="start-menu-list">
-                        <ul>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Programs</span>
-                                <span class="sub-menu-triangle-right">
-                                    <div class="right-triangle"></div>
-                                </span>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li>
-                                            <img src="/assets/img/windows95.png" alt="Start Logo">
-                                            <span>Accessories</span>
-                                            <span class="sub-menu-triangle-right">
-                                                <div class="right-triangle"></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <img src="/assets/img/windows95.png" alt="Start Logo">
-                                            <span>StartUp</span>
-                                            <span class="sub-menu-triangle-right">
-                                                <div class="right-triangle"></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <img src="/assets/img/windows95.png" alt="Start Logo">
-                                            <span>Windows Explorer</span>
-                                            <span class="sub-menu-triangle-right">
-                                                <div class="right-triangle"></div>
-                                            </span>
-                                            <div class="sub-menu-list">
-                                                <ul>
-                                                    <li>
-                                                        <img src="/assets/img/windows95.png" alt="Start Logo">
-                                                        <span>Accessories</span>
-                                                        <span class="sub-menu-triangle-right">
-                                                            <div class="right-triangle"></div>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="/assets/img/windows95.png" alt="Start Logo">
-                                                        <span>StartUp</span>
-                                                        <span class="sub-menu-triangle-right">
-                                                            <div class="right-triangle"></div>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="/assets/img/windows95.png" alt="Start Logo">
-                                                        <span>Windows Explorer</span>
-                                                        <span class="sub-menu-triangle-right">
-                                                            <div class="right-triangle"></div>
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Documents</span>
-                                <span class="sub-menu-triangle-right">
-                                    <div class="right-triangle"></div>
-                                </span>
-                            </li>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Settings</span>
-                                <span class="sub-menu-triangle-right">
-                                    <div class="right-triangle"></div>
-                                </span>
-                            </li>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Find</span>
-                            </li>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Help</span>
-                            </li>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Run...</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="/assets/img/windows95.png" alt="Start Logo">
-                                <span>Shut Down</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="desktop-shortcut" id="desktop-shortcut-my-computer">
-                    <div class="shortcut-icon">
-                        <img src="/assets/img/thumb-myComputer.png" alt="my computer shortcut">
-                    </div>
-                    <div class="shortcut-text">
-                        My Computer
-                    </div>
-                </div>
-
-                <div class="desktop-shortcut" id="desktop-shortcut-documents">
-                    <div class="shortcut-icon">
-                        <img src="/assets/img/thumb-closedFolder.png" alt="documents shortcut">
-                    </div>
-                    <div class="shortcut-text">
-                        Documents
-                    </div>
-                </div>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="desktop">
+        <div id="start-menu">
+          <div id="start-brand">
+            <div class="container">
+              <div>Windows&nbsp;</div>
+              <div>95</div>
             </div>
-            <footer id="task-bar">
-                <div class="container">
-                    <div id="start-btn" class="item">
-                        <img src="/assets/img/windows95.png" alt="Start Logo">
-                        <span>Start</span>
-                    </div>
-                    <div class="container" id="taskbar-application">
-                        <div class="item">
-                            <img src="/assets/img/thumb-closedFolder.png" alt="Start Logo">
-                            <span>Welcome</span>
-                        </div>
-                        <div class="item item-focus crosshatch">
-                            <img src="/assets/img/thumb-closedFolder.png" alt="application icon">
-                            <span>File Explorer</span>
-                        </div>
-                    </div>
-                    <div id="taskbar-clock" class="item">
-                        12:35 pm
-                    </div>
+          </div>
+          <div id="start-menu-list">
+            <ul>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Programs</span>
+                <span class="sub-menu-triangle-right">
+                  <div class="right-triangle"></div>
+                </span>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li>
+                      <img src="/assets/img/windows95.png" alt="Start Logo" />
+                      <span>Accessories</span>
+                      <span class="sub-menu-triangle-right">
+                        <div class="right-triangle"></div>
+                      </span>
+                    </li>
+                    <li>
+                      <img src="/assets/img/windows95.png" alt="Start Logo" />
+                      <span>StartUp</span>
+                      <span class="sub-menu-triangle-right">
+                        <div class="right-triangle"></div>
+                      </span>
+                    </li>
+                    <li>
+                      <img src="/assets/img/windows95.png" alt="Start Logo" />
+                      <span>Windows Explorer</span>
+                      <span class="sub-menu-triangle-right">
+                        <div class="right-triangle"></div>
+                      </span>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li>
+                            <img
+                              src="/assets/img/windows95.png"
+                              alt="Start Logo"
+                            />
+                            <span>Accessories</span>
+                            <span class="sub-menu-triangle-right">
+                              <div class="right-triangle"></div>
+                            </span>
+                          </li>
+                          <li>
+                            <img
+                              src="/assets/img/windows95.png"
+                              alt="Start Logo"
+                            />
+                            <span>StartUp</span>
+                            <span class="sub-menu-triangle-right">
+                              <div class="right-triangle"></div>
+                            </span>
+                          </li>
+                          <li>
+                            <img
+                              src="/assets/img/windows95.png"
+                              alt="Start Logo"
+                            />
+                            <span>Windows Explorer</span>
+                            <span class="sub-menu-triangle-right">
+                              <div class="right-triangle"></div>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-            </footer>
+              </li>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Documents</span>
+                <span class="sub-menu-triangle-right">
+                  <div class="right-triangle"></div>
+                </span>
+              </li>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Settings</span>
+                <span class="sub-menu-triangle-right">
+                  <div class="right-triangle"></div>
+                </span>
+              </li>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Find</span>
+              </li>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Help</span>
+              </li>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Run...</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="/assets/img/windows95.png" alt="Start Logo" />
+                <span>Shut Down</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    </body>
+
+        <div class="desktop-shortcut" id="desktop-shortcut-my-computer">
+          <div class="shortcut-icon draggable">
+            <img
+              src="/assets/img/thumb-myComputer.png"
+              alt="my computer shortcut"
+            />
+          </div>
+          <div class="shortcut-text">My Computer</div>
+        </div>
+
+        <div class="desktop-shortcut" id="desktop-shortcut-documents">
+          <div class="shortcut-icon draggable">
+            <img
+              src="/assets/img/thumb-closedFolder.png"
+              alt="documents shortcut"
+            />
+          </div>
+          <div class="shortcut-text">Documents</div>
+        </div>
+
+        <div class="desktop-window" id="desktop-window-documents">
+          <div class="window-banner draggable">
+            <div class="window-title">
+              <img src="/assets/img/thumb-closedFolder.png" alt="Start Logo" />
+              <span>Control Panel</span>
+            </div>
+            <div class="window-action-buttons">
+              <div class="action-btn close-window">
+                <div class="close-shape">&#215;</div>
+              </div>
+              <div class="action-btn maximize-window">
+                <div class="maximize-shape disable"></div>
+              </div>
+              <div class="action-btn minimize-window">
+                <div class="minimize-shape"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="task-bar">
+        <div class="container">
+          <div id="start-btn" class="item">
+            <img src="/assets/img/windows95.png" alt="Start Logo" />
+            <span>Start</span>
+          </div>
+          <div class="container" id="taskbar-application">
+            <div class="item">
+              <img src="/assets/img/thumb-closedFolder.png" alt="Start Logo" />
+              <span>Welcome</span>
+            </div>
+            <div class="item item-focus crosshatch">
+              <img
+                src="/assets/img/thumb-closedFolder.png"
+                alt="application icon"
+              />
+              <span>File Explorer</span>
+            </div>
+          </div>
+          <div id="taskbar-clock" class="item">12:35 pm</div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
